@@ -1,0 +1,22 @@
+<div class="startPageGrid">
+
+    <div class="item b2">
+        <img id="bag2" src="/images/plasticBag2.png" alt="bag2">
+        <div class="item login">
+            <a href="/">Go Back</a>
+        </div>
+    </div>
+
+    <p class="loginError">{{errEmail}}</p>
+    <p class="loginError">{{errPassword}}</p>
+    <form id="loginForm" method="POST">
+        <label for="email">email</label>
+        <input type="email" name="email">
+        <label for="password">password</label>
+        <input type="password" name="password">
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+        <button class="btn" type="submit">submit</button>
+    </form>
+
+</div>

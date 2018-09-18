@@ -1,0 +1,32 @@
+<div class="startPageGrid">
+<div class="wrapper">
+    <section class="editForms">
+        <form method="POST">
+            {{#res}}
+
+            <label for="firstname">First Name</label>
+            <input type="text" name="firstname" value="{{first_name}}" required>
+            <label for="lastname">Last name</label>
+            <input type="text" name="lastname" value="{{last_name}}">
+            <label for="email">Email</label>
+            <input type="email" name="email" value="{{email}}">
+            <label for="age">Age</label>
+            <input type="text" name="age" value="{{age}}">
+            <label for="city">City</label>
+            <input type="text" name="city" value="{{city}}">
+            <label for="homepage">Homepage</label>
+            <input type="text" name="homepage" value="{{homepage}}"> {{/res}}
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            <button class="btn">Save changes</button>
+        </form>
+        <form id="changePassword" method="POST">
+            <label for="oldPassword">Old Password</label>
+            <input type="password" name="oldPassword">
+            <label for="newPassword">New Password</label>
+            <input type="password" name="newPassword">
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            <button class="btn">Save changes</button>
+        </form>
+    </section>
+</div>
+</div>

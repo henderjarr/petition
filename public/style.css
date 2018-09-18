@@ -1,0 +1,524 @@
+/* ------config----- */
+:root {
+    --myBlack: #414a4c;
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+body {
+    margin: 0;
+    background-color: #E7E3D2;
+
+}
+/* --------------------------------start page-------------------------------------- */
+/* --------------objects------------ */
+.startPageGrid {
+    display: grid;
+    grid-template-columns: 1fr repeat(6, 150px) 1fr;
+    grid-template-rows: auto 200px 200px 10px 200px auto;
+    grid-gap: 20px;
+}
+/* ---bag1--- */
+#bag1 {
+    width: 100px;
+    height: auto;
+    filter: contrast(90%) brightness(80%) saturate(90%) grayscale(3%);
+}
+.b1 {
+    grid-column: 3 / 4;
+    grid-row: 3 /4 ;
+    padding: 20px;
+    position: relative;
+}
+
+/* -----animations ----- */
+.animateY{
+    transform: translateY(150px);
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.animateX{
+    transform: translateX(150px) scale(2);
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.animateXback {
+    transform: translateX(0px) scale(1);
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.animateYback {
+    transform: translateY(0px);
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.spinMe { 
+    animation: spin 1s;
+    transform: rotate(55deg);
+    /* animation-iteration-count: ; */
+}
+.moveMe {
+
+    transform: translate(40px, -180px);
+    transition: 1s ease-out;
+}
+.spinMeBack{
+    animation: spinBack 1s;
+
+}
+.moveMeBack {
+    transform: translate(0px, 0px);
+    transition: 1s ease-out;
+}
+/* -----keyframes shake ----- */
+@keyframes spin {
+    0% {
+        transform:rotate(0deg);
+    }
+    
+    100% {
+        transform:rotate(415deg);
+    }
+}
+@keyframes spinBack {
+    100% {
+        transform:rotate(-360deg);
+    }
+    
+    0% {
+        transform:rotate(55deg);
+    }
+}
+
+.animateBT1{
+    transform: rotate(90deg);
+    transition: transform .5s ease 3ms;
+}
+.animateBT1back{
+    transform: rotate(90deg);
+    transition: transform .5s ease .5s;
+}
+.animateOpacity {
+    opacity: 1;
+    transition: opacity .5s ease;
+}
+/* ---sign up behind bag1--- */
+.signup a{
+    position: absolute;
+    top: 100px;
+    left: 24px;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    color: var(--myBlack);
+    font-size: 20px;
+    z-index: -1;
+    
+}
+/* ---bag2--- */
+#bag2 {
+    width: 100px;
+    height: auto;
+}
+.b2 {
+    grid-column: 5/6;
+    grid-row: 3/4;
+    padding: 20px;
+    position: relative;
+
+}
+/* --- login behind bag2----- */
+.login a{
+    position: absolute;
+    top: 100px;
+    left: 23px;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    color: var(--myBlack);
+    font-size: 20px;
+    z-index: -1;
+    
+}
+/* ---bottle 1----- */
+.bt1 {
+    grid-column: 6/7;
+    grid-row: 3/ 4;
+    padding: 35px;
+}
+/* ----title h1 in bottle 1----- */
+.startpageTitle {
+    grid-row: 4;
+    grid-column: 7;
+    align-self: center;
+    white-space: nowrap;
+    font-family: 'Raleway', sans-serif;
+    color: var(--myBlack);
+    font-size: 35px;
+    word-spacing: 15px;
+    padding-left: 20px;
+    transform: rotate(90deg);
+    opacity: 0;
+
+}
+/* ----bottle 2 ---- */
+.bt2 {
+    grid-column: 4/5;
+    grid-row: 3/4;
+    padding-top: 20px;
+    padding-left: 50px;
+
+}
+/* ----bottle 3 ---- */
+.bt3 {
+    grid-column: 7/8;
+    grid-row: 3 /4;
+    padding-top: 35px;
+    padding-left: 45px;
+}
+/* -----straw ----- */
+#straw1 {
+    width: 90px;
+    height: auto;
+}
+.s1{
+    grid-column: 2/3;
+    grid-row: 3 / 4;
+    padding-top: 50px;
+    padding-left: 30px;
+
+}
+
+.startpageSubtitle{
+    
+    grid-column: 3 / 7;
+    grid-row: 2/3;
+    padding-top: 60px;
+    opacity: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+
+}
+/* -------signup page----------------------------///////////////// */
+
+#signUpForm {
+    display: flex;
+    grid-column: 4 / 7;
+    grid-row: 2 / 6;
+    align-self: center;
+    align-items: center;
+
+
+}
+.signUpError{
+    grid-column: 4 / 7;
+    grid-row: 4 / 5;
+    padding-top: 100px;
+    font-size: 30px;
+    color: tomato;
+    
+}
+
+
+/* ---------------log in page=----------------------/////////////// */
+#loginForm {
+    display: flex;
+    grid-column: 3 / 5;
+    grid-row: 2 / 6;
+    align-self: center;
+    align-items: center;
+}
+.loginError {
+    grid-column: 3 / 5;
+    grid-row: 2 / 3;
+    padding-top: 100px;
+    font-size: 30px;
+    color: tomato; 
+}
+
+/* --------------profile form ----------------------//////////////////// */
+#profileForm {
+    display: flex;
+    grid-column: 4 / 6;
+    grid-row: 3 / 4;
+    align-self: center;
+    align-items: center;
+    padding-top: 30px;
+
+}
+#infoPage {
+    grid-column: 3/5;
+    grid-row: 2/3;
+    font-size: 40px;
+}
+.data{
+    grid-column: 3 / 5;
+    grid-row:  2 / 3;
+    padding-top: 80px;
+    font-size: 25px;
+    flex-wrap: wrap;
+}
+.data1{
+    grid-column: 3 / 7;
+    grid-row:  2 / 3;
+    padding-top: 110px;
+    font-size: 25px;
+    flex-wrap: wrap;
+}
+.data3 {
+    grid-column: 4 / 8;
+    grid-row: 2 /3;
+    padding-left: 5px;
+    border-left: solid 4px rgba(0, 0, 0, 0.5);
+    margin-left: 100px;
+    margin-top: 105px;
+    margin-bottom: 40px;
+
+}
+/* -------------signnature page ===-----------------///////////////// */
+#signaturePara {
+    grid-column: 3 / 7;
+    grid-row: 2 / 3;
+    padding-left: 5px;
+    border-left: solid 4px rgba(0, 0, 0, 0.5);
+    margin-left: 20px;
+    margin-top: 105px;
+    margin-bottom: 40px;
+}
+
+#sketch {
+    grid-column: 4 / 7;
+    grid-row: 3 / 6;
+
+}
+#Form {
+    display: flex;
+    grid-column: 6 / 7;
+    grid-row: 4 /6 ;
+
+
+}
+
+
+/* ----------------------thanks Page -----------------------////////////// */
+.startPageGrid1 {
+    display: grid;
+    grid-template-columns: 1fr repeat(6, 150px) 1fr;
+    grid-template-rows:  0px 200px 200px 10px 200px auto;
+    grid-gap: 20px;
+}
+#thanks {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    font-size: 40px;
+    padding-left: 30px;
+    padding-top: 50px;
+}
+#image {
+    grid-column: 3/6;
+    grid-row: 2 /4;
+}
+#thanksPara {
+    grid-column: 2/6;
+    grid-row-start: 3; 
+    font-size: 20px;
+    /* border: 1px solid var(--myBlack); */
+    padding: 20px;
+    margin-bottom: 45px;
+}
+
+/* ------------------home page with form ----------------- */
+form {
+    display: flex;
+    flex-direction: column;
+}
+form input{
+    margin: 10px;
+    width: 150px;
+    align-self: center;
+}
+.btn {
+    background-color: rgb(53, 51, 51);
+    color: white;
+    padding: 10px;
+    width: 70px;
+    border: none;
+    border-radius: 10px;
+    align-self: center;
+    margin-top: 10px;
+    
+
+}
+#heading {
+    margin: 5% 0 5% 0;
+    color: #42434D;
+
+
+}
+#subHeading {
+    /* margin-bottom: 50px; */
+    color: #42434D;
+    /* padding: 20px; */
+}
+.error {
+    color: tomato;
+}
+#canvas{
+    display: block;
+    border: solid 1px rgba(0, 0, 0, 0.2);
+    position: relative;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: 20px;
+    
+}
+
+/* ----------profile page ------------ */
+
+#proPage {
+    grid-column: 3/5;
+    grid-row: 2/3;
+}
+.wrapperProfile {
+    grid-column: 3 / 6;
+    grid-row: 2 / 5;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-left: 20px;
+}
+.profileInformation{
+}
+#buttonProfilePage {
+    grid-column: 3 / 4;
+    grid-row: 5/6;
+    margin-left: 20px;
+    margin-top: -60px;
+}
+#lowerPage {
+    margin-top: 100px;
+}
+
+/* ------navigation bar --------*/
+#navPlacement {
+    display: flex;
+    grid-column: 7/8;
+    grid-row: 2 / 4;
+}
+.nav {
+    flex-direction: row;
+}
+.nav a {
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+
+}
+.nav a .imgbag {
+    width: 60px;
+    height: auto;
+    margin-left: 30px;
+    margin-top: 20px;
+
+}
+.nav a .imgbottle {
+    width: 30px;
+    height: auto;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+.nav a .imgbottle3 {
+    width: 40px;
+    height: auto;
+    margin-left: 40px;
+    margin-top: 30px;
+
+}
+#logOutProfile {
+    float: right;
+    font-size: 20px;
+    transform: rotate(90deg);
+    margin-left: 70px;
+    margin-top: -60px;
+
+}
+#signersProfile {
+    float: right;
+    font-size: 20px;
+    transform: rotate(90deg);
+    margin-left: 70px;
+    margin-top: -80px;
+
+}
+#profileProfile {
+    float: right;
+    font-size: 20px;
+    transform: rotate(90deg);
+    margin-left: 70px;
+    margin-top: -60px;
+
+}
+#thanksProfile {
+    float: right;
+    font-size: 20px;
+    transform: rotate(90deg);
+    margin-left: 70px;
+    margin-top: -60px;
+}
+
+/* ----------------signers page ----------------///////////////// */
+.nameWrapper {
+    grid-column: 3 / 6;
+    grid-row: 2;
+}
+.nameWrapper2 {
+
+    grid-column: 3 / 6;
+    grid-row: 2;
+    margin-top: 100px;
+}
+
+/* ------------password changer------------ */
+.editForms{
+    display: flex;
+    flex-direction: row;
+}
+#changePassword {
+    margin-left: 150px;
+}
+
+.notice{
+    display: block;
+    position: fixed;
+    z-index: 100;
+    left: 5%;
+    top: 75%;
+    width: 300px;
+    height: fit-content;
+    border: 3px solid black;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* .showNotice{
+    
+} */
+
+
+.wrapper {
+    /* display: flex; */
+    grid-column: 4 / 7;
+    grid-row: 2 / 6;
+    align-self: center;
+    align-items: center;
+
+
+}

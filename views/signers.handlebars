@@ -1,0 +1,32 @@
+<div id="lowerPage">
+    <div class="startPageGrid">
+        <div id="navPlacement">{{>nav}}</div>
+        <div class="nameWrapper">
+
+            <h2>Here is the list of great people who have already joined the cause </h2>
+
+            {{#results}} 
+            <p>
+
+                {{#if homepage}}
+                <a href="https://{{homepage}}">{{ first_name }} {{last_name}}</a>
+                {{else}} {{ first_name }} {{last_name}} {{/if}} {{{foo age city}}}
+
+            </p>
+            {{/results}}
+        </div>
+
+        <div class="nameWrapper2">
+            {{#cityResults}}
+            <p>
+
+                {{#if homepage}}
+                <a href="https://{{homepage}}">{{ first_name }} {{last_name}}</a>
+                {{else}} {{ first_name }} {{last_name}} {{/if}} {{{foo age city}}}
+
+            </p>
+            {{/cityResults}}
+        </div>
+        
+    </div>
+</div>

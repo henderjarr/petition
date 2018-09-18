@@ -1,0 +1,24 @@
+<div class="startPageGrid">
+
+   <p id="signaturePara">Hey {{name}}, last, but most important we need your signature for our anti-plastic petition, <br> don't worry you can always delete it later if you decide you like plastic, but i hope that doesn't become the case. </p>
+
+    <p class="error">{{err}}</p>
+    <form id="Form" method="POST">
+
+        <input id="hiddenInput" type="hidden" name="signature">
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+        <button class="btn" type="submit">submit</button>
+    </form>
+
+    <div id="sketch">
+        <canvas width="400" height="170" id="canvas"></canvas>
+    </div>
+
+    <div class="item b1">
+        <img id="bag1" src="/images/plasticBag1.png" alt="bag1">
+        <div class="item signup">
+            <a href="/logout">Log Out</a>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,27 @@
+<div class="startPageGrid">
+
+    <h1 id="infoPage">Info Page</h1>
+
+    <p class="data">hello {{name}} {{lastname}}</p>
+    <p class="data1">{{email}} </p>
+    <p class="data3"> Some additional information would help us get to know <br> how broad our anti-plastic members extend, but if you dont want to feel free to leave the spaces empty and simply click the continue button.</p>
+    <div class="item b1">
+        <img id="bag1" src="/images/plasticBag1.png" alt="bag1">
+        <div class="item signup">
+            <a href="/logout">log out</a>
+        </div>
+    </div>
+
+    <form id="profileForm" method="POST">
+        <label for="age">Age</label>
+        <input type="text" name="age">
+        <label for="city">City</label>
+        <input type="text" name="city">
+        <label for="homepage">Homepage</label>
+        <input type="text" name="homepage">
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+        <button class="btn" type="submit">continue</button>
+    </form>
+
+</div>

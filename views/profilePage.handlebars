@@ -1,0 +1,26 @@
+<div id="lowerPage">
+    <div class="startPageGrid">
+
+        <div id="navPlacement">{{>nav}}</div>
+        <h1 id="proPage">Your Profile</h1>
+        <div class="wrapperProfile">
+            <h3 class="profileInformation">First Name: {{results.first_name}}</h3>
+            <h3 class="profileInformation">Last Name: {{results.last_name}}</h3>
+            <h3 class="profileInformation">Email: {{results.email}}</h3>
+            <h3 class="profileInformation">Age: {{results.age}}</h3>
+            <h3 class="profileInformation">City: {{results.city}}</h3>
+            <h3 class="profileInformation">Homepage: {{results.homepage}}</h3>
+            <h3 class="profileInformation">{{results.password}}</h3>
+        </div>
+        <button id="buttonProfilePage" class="btn">edit profile</button>
+
+
+        <script type="text/javascript">
+            const buttonProfilePage = document.getElementById('buttonProfilePage')
+            buttonProfilePage.addEventListener('click', function () {
+                location.href = '/profilePage/editProfile'
+            })
+        </script>
+
+    </div>
+</div>
