@@ -94,9 +94,9 @@ exports.getSigners = function () {
 exports.getSignersData = function () {
     return db.query(`SELECT users.first_name, users.last_name, user_profiles.age, user_profiles.city, user_profiles.homepage, signatures.signature 
                     FROM users
-                    JOIN user_profiles
+                    LEFT JOIN user_profiles
                         ON users.id = user_profiles.user_id
-                    JOIN signatures
+                    LEFT JOIN signatures
                         ON users.id = signatures.user_id;`)
         .then((results) => {
             return results.rows
