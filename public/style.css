@@ -18,6 +18,19 @@ body {
 
 }
 /* --------------------------------start page-------------------------------------- */
+#portfolioLink{
+    width: fit-content;
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    margin: 5px 0 0 5px;
+    padding: 2px;
+
+}
+#portfolioLink:hover{
+    background-color: white;
+}
 /* --------------objects------------ */
 .startPageGrid {
     display: grid;

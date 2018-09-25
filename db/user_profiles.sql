@@ -7,3 +7,8 @@ CREATE TABLE user_profiles (
     homepage VARCHAR(200),
     user_id INTEGER REFERENCES users(id)
 );
+INSERT INTO user_profiles (age, city, homepage, user_id) VALUES ('33', 'Berlin', 'google.com', 2);
+INSERT INTO user_profiles (age, city, homepage, user_id) VALUES ('23', 'Berlin', 'postgresql.org' ,1);
+INSERT INTO user_profiles (age, city, homepage, user_id) VALUES ('46', 'Wellington', 'twitter.com', 3);
+INSERT INTO user_profiles (age, city, user_id) VALUES ('34', 'NewYork', 4);
+INSERT INTO user_profiles (age, city, user_id) VALUES ('19', 'Wellington',5);
